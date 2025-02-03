@@ -1,9 +1,0 @@
-Des exemples de ton travail : Photos, vidéos, applications, ou même des liens vers des articles, projets ou présentations que tu as réalisés.
-Des descriptions de chaque projet : Ce que tu as fait, les défis rencontrés et comment tu as résolu les problèmes.
-
-
-Cette page doit offrir un moyen facile pour les gens de te contacter :
-
-Formulaire de contact : Permet aux visiteurs d’envoyer un message directement depuis le site.
-Adresse email : Affiche ton email pour un contact plus direct.
-Réseaux sociaux : Lien vers tes profils (LinkedIn, Twitter, GitHub, Instagram, etc.) pour que les visiteurs puissent te suivre ou entrer en contact via d’autres plateformes.
