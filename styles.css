@@ -44,7 +44,7 @@ footer {
 
 /* Header */
 header {
-    background-color: #144909;
+    background-color: #3e7a31;
     padding: 1rem;
 }
 
@@ -62,8 +62,8 @@ header nav ul li a {            /* lien en header */
 
 /* Hero */
 .hero {
-    background-color: #689668;
     padding: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-bottom: 2rem;
 }
