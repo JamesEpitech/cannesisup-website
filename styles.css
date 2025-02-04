@@ -1,10 +1,20 @@
+/* Variables CSS (si applicable) */
+:root {
+    --main-bg-color: #689668;
+    --main-text-color: #ecffe2;
+    --footer-bg-color: #333;
+    --header-bg-color: #3e7a31;
+    --button-bg-color: #007BFF;
+    --button-hover-bg-color: #0056b3;
+}
+
 /* Style de base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #689668;
-    color: #ecffe2; /* Texte par défaut en #555 */
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,8 +26,7 @@ main {
 }
 
 .container {
-    padding-left: 50px;   /* Espace de 50px à gauche */
-    padding-right: 50px;
+    padding: 0 50px; /* Espace de 50px à gauche et à droite */
 }
 
 option {
@@ -28,13 +37,11 @@ option {
 html, body {
     width: 100%;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: var(--footer-bg-color);
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -44,17 +51,17 @@ footer {
 
 /* Header */
 header {
-    background-color: #3e7a31;
+    background-color: var(--header-bg-color);
     padding: 1rem;
 }
 
-header nav ul {                 /* HEADER affichage en colonne */
+header nav ul { /* HEADER affichage en colonne */
     list-style-type: none;
     display: flex;
     justify-content: space-around;
 }
 
-header nav ul li a {            /* lien en header */
+header nav ul li a { /* lien en header */
     color: white;
     text-decoration: none;
     padding: 0.5rem;
@@ -70,14 +77,14 @@ header nav ul li a {            /* lien en header */
 
 /* CV PAGE */
 .cv-preview {
-    background-color: #333;
+    background-color: var(--footer-bg-color);
 }
 
 /* Formulaire de contact */
 form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #333;
+    background-color: var(--footer-bg-color);
     padding: 2rem;
     border-radius: 5px;
 }
@@ -95,7 +102,7 @@ form input, form textarea {
 }
 
 form button {
-    background-color: #007bff;
+    background-color: var(--button-bg-color);
     color: white;
     padding: 1rem;
     border: none;
@@ -104,15 +111,15 @@ form button {
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover-bg-color);
 }
-
 
 /* Section d'installation */
 .installation-section {
     text-align: center;
     padding: 50px 20px;
     color: #555; /* Texte dans la section d'installation */
+    font-size: 3rem;
 }
 
 .installation-info {
@@ -138,10 +145,9 @@ form button:hover {
 .available {
     width: 100%;
     text-align: left;
-    font-size: 16px;
-    margin-top: 20px;
-    color: #555; /* Texte en #555 */
     font-size: 25px;
+    margin-top: 20px;
+    color: #555;
     position: relative;
     left: 10px;
 }
@@ -150,7 +156,7 @@ form button:hover {
 .store-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 10px;
     gap: 20px; /* Espace entre les boutons */
 }
 
@@ -161,8 +167,8 @@ form button:hover {
     padding: 0;  /* Pas de padding */
     cursor: pointer;
     display: inline-block;
-    width: 120px;  /* Réduit la largeur du bouton */
-    height: 40px;  /* Réduit la hauteur du bouton */
+    width: 120px;
+    height: 40px;
     position: relative;  /* Pour mieux positionner l'image à l'intérieur du bouton */
 }
 
@@ -175,7 +181,7 @@ form button:hover {
 
 /* Bouton d'installation */
 .install-btn {
-    background-color: #007BFF;
+    background-color: var(--button-bg-color);
     color: white;
     font-size: 18px;
     padding: 12px 20px;
@@ -187,17 +193,9 @@ form button:hover {
 }
 
 .install-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover-bg-color);
 }
 
 h1 { 
-    color: #ecffe2; /* Couleur du texte pour install MYescape */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+    color: var(--main-text-color); /* Couleur du texte pour install MYescape */
 }
