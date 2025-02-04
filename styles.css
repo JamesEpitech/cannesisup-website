@@ -330,19 +330,20 @@ h1 {
         display: none; /* Cacher par défaut */
     }
 
+    /* Affichage du bouton burger uniquement sur mobile */
+    .burger-menu {
+        display: flex;
+    }
     header nav ul.visible {
         display: flex; /* Afficher quand la classe "visible" est ajoutée */
         flex-direction: column;
         width: 100%;
         background-color: var(--header-bg-color);
         position: absolute;
-        top: 50px;
+        top: -30px;
         left: 0;
         padding: 10px 0;
     }
 
-    /* Affichage du bouton burger uniquement sur mobile */
-    .burger-menu {
-        display: flex;
-    }
+
 }
