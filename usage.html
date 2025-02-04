@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Usage</title>
+    <title>App Usage - MyEscape</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
+            <button class="burger-menu" aria-label="Toggle menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="installation.html">Installation</a></li>
@@ -20,25 +25,32 @@
     </header>
 
     <main>
-        <section class="App Usage">
-            <div class="container">
-                <h1>App Usage</h1>
-            </div>
-            <div class="container1">
-                <h3>First Step</h3>
-                <p></p>
+        <section class="hero">
+            <h1>App Usage</h1>
+            <p>Learn how to make the most out of MyEscape.</p>
+        </section>
+
+        <section class="app-usage">
+            <div class="step">
+                <h2>First Step</h2>
+                <p>Download and install the application following the installation guide.</p>
             </div>
 
-            <div class="container1">
-                <h3>Second Step</h3>
-                <p></p>
+            <div class="step">
+                <h2>Second Step</h2>
+                <p>Open the app, create an account, and start exploring recommended locations.</p>
             </div>
-
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 MyEscape</p>
     </footer>
+
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('visible');
+        });
+    </script>
 </body>
 </html>

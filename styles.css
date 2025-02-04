@@ -55,11 +55,14 @@ header {
 
 header nav ul { /* HEADER affichage en colonne */
     list-style-type: none;
-    display: flex;
+    display: flex; /* Show by default */
     justify-content: space-around;
     font-size: 30px;
 }
 
+header nav ul.visible { /* Show when visible class is applied */
+    display: flex; /* Show the menu when the class is applied */
+}
 
 header nav ul li a { /* lien en header */
     color: white;
@@ -300,45 +303,46 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Adaptation sur écrans plus petits */
-@media (max-width: 768px) {
-    .podium {
+/* Masquer le bouton burger par défaut */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Style des trois barres du burger */
+.burger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none; /* Cacher par défaut */
+    }
+
+    header nav ul.visible {
+        display: flex; /* Afficher quand la classe "visible" est ajoutée */
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        background-color: var(--header-bg-color);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
     }
 
-    .activity {
-        width: 90%;
-        max-width: 250px;
-        height: auto;
-    }
-
-    .top1, .top2, .top3 {
-        height: auto;
-        transform: none; /* Désactive l'effet podium sur mobile */
+    /* Affichage du bouton burger uniquement sur mobile */
+    .burger-menu {
+        display: flex;
     }
 }
-
-/* Styles de base du menu */
-nav {
-    background-color: #3e7a31;
-    padding: 10px 20px;
-    position: relative;
-}
-
-/* Menu de navigation *
-
-/* Liens du menu */
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    display: block;
-    font-size: 1.2rem;
-}
-
-/*Premiere montrer le Top 3 des lieux et ensuite proposer le meilleur profile avec qui etre en fonction de ce qu'on veut et partage avec la personne pour avoir des echanges 

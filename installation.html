@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Installation du Service</title>
+    <title>Installation du Service - MyEscape</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
+            <button class="burger-menu" aria-label="Toggle menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="installation.html">Installation</a></li>
@@ -46,7 +51,6 @@
                         <img src="appstore-button.png">
                     </button>
                 </div>
-
             </div>
         </section>
     </main>
@@ -54,5 +58,11 @@
     <footer>
         <p>&copy; 2025 MyEscape</p>
     </footer>
+
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('visible');
+        });
+    </script>
 </body>
 </html>
