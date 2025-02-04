@@ -86,11 +86,6 @@ header nav ul li a:hover {
     margin-bottom: 2rem;
 }
 
-/* CV PAGE */
-.cv-preview {
-    background-color: var(--footer-bg-color);
-}
-
 /* Formulaire de contact */
 form {
     max-width: 600px;
@@ -98,6 +93,11 @@ form {
     background-color: var(--footer-bg-color);
     padding: 2rem;
     border-radius: 5px;
+}
+
+.form-text {
+    position: relative;
+    left: 600px; /* Ajuste la valeur selon tes besoins */
 }
 
 form label {
@@ -344,6 +344,57 @@ h1 {
         left: 0;
         padding: 10px 0;
     }
+}
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.animate-up {
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+@keyframes fadeInLeftToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-550px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-left-to-right {
+    opacity: 0;
+    animation: fadeInLeftToRight 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.3s;
+}
+
+.animatefadetitle {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 0.4s;
 }
