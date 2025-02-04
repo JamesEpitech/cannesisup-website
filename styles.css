@@ -29,10 +29,9 @@ main {
     padding: 0 50px; /* Espace de 50px à gauche et à droite */
 }
 
-option {
-    font-size: 16px; /* Agrandir la taille du texte dans les options */
+.container1 {
+    padding: 0 100px; /* Espace de 50px à gauche et à droite */
 }
-
 /* Retirer les marges et padding supplémentaires */
 html, body {
     width: 100%;
@@ -52,19 +51,28 @@ footer {
 /* Header */
 header {
     background-color: var(--header-bg-color);
-    padding: 1rem;
 }
 
 header nav ul { /* HEADER affichage en colonne */
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+    font-size: 30px;
 }
+
 
 header nav ul li a { /* lien en header */
     color: white;
     text-decoration: none;
     padding: 0.5rem;
+}
+
+header nav ul li a:hover { 
+    box-shadow: 0 0 50px 10px rgba(104, 150, 104, 1);
+    transition: box-shadow 0.3s ease;
+    background-color: rgb(123, 168, 123);
+    border-radius: 15px; /* Arrondi des bords */
+
 }
 
 /* Hero */
@@ -152,6 +160,16 @@ form button:hover {
     left: 10px;
 }
 
+.available1 {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #555;
+    position: relative;
+    left: 10px;
+}
+
 /* Boutons PlayStore et AppleStore */
 .store-buttons {
     display: flex;
@@ -167,8 +185,8 @@ form button:hover {
     padding: 0;  /* Pas de padding */
     cursor: pointer;
     display: inline-block;
-    width: 120px;
-    height: 40px;
+    width: 170px; /* Augmenter légèrement la largeur */
+    height: 60px; /* Augmenter légèrement la hauteur */
     position: relative;  /* Pour mieux positionner l'image à l'intérieur du bouton */
 }
 
@@ -199,3 +217,86 @@ form button:hover {
 h1 { 
     color: var(--main-text-color); /* Couleur du texte pour install MYescape */
 }
+
+.top-activities {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+    color: #3e7a31;
+}
+
+/* Titre */
+.top-activities h2 {
+    font-size: 2rem;
+    color: #3e7a31;
+    margin-bottom: 100px;
+}
+
+/* Podium Layout */
+/* Podium Layout */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alignement en bas pour créer l'effet podium */
+    gap: 20px;
+    text-align: center;
+}
+
+/* Style général des activités */
+.activity {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px; /* Taille de base */
+    text-align: center;
+}
+
+/* Hauteur du podium */
+.top1 {
+    height: 300px; /* TOP 1 le plus haut */
+}
+
+.top2 {
+    height: 270px; /* TOP 2 un peu plus bas */
+}
+
+.top3 {
+    height: 250px; /* TOP 3 légèrement plus bas */
+}
+
+/* Animation au survol */
+.activity:hover {
+    transform: scale(1.2); /* Agrandir sans modifier la position */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+    z-index: 10; /* Le faire passer au-dessus des autres */
+}
+
+/* Images */
+.activity img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.activity img.small {
+    height: 150px; /* Taille réduite */
+    object-fit: scale-down;
+    margin-top: -80px;
+}
+
+/* Classement */
+.rank {
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/*Premiere montrer le Top 3 des lieux et ensuite proposer le meilleur profile avec qui etre en fonction de ce qu'on veut et partage avec la personne pour avoir des echanges 
