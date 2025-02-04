@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - MyEscape</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <link rel="icon" href="icon.webp"/>
 </head>
 <body>
@@ -32,19 +33,17 @@
         </section>
 
         <section class="about">
-            <h2>Who are we?</h2>
-            <p>MyEscape is dedicated to helping you find the best places to explore and enjoy.</p>
+            <div class="container">
+                <h2>Who are we?</h2>
+            </div>
+            <div class="container1">
+                <p>MyEscape is dedicated to helping you find the best places to explore and enjoy.</p>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 MyEscape</p>
     </footer>
-
-    <script>
-        document.querySelector('.burger-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('visible');
-        });
-    </script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Installation du Service - MyEscape</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <link rel="icon" href="icon.webp"/>
 </head>
 <body>
@@ -43,15 +44,13 @@
                 <div class="available1">
                     <span>Available on :</span> 
                 </div>
-
-                <!-- Boutons PlayStore et AppleStore avec images -->
                 <div class="store-buttons">
-                    <button class="store-btn" id="playstore-btn">
-                        <img src="playstore-button.png">
-                    </button>
-                    <button class="store-btn" id="appstore-btn">
-                        <img src="appstore-button.png">
-                    </button>
+                    <a href="https://play.google.com/store/apps/" target="_blank" class="store-btn">
+                        <img src="playstore-button.png" alt="Download on Play Store">
+                    </a>
+                    <a href="https://apps.apple.com/" target="_blank" class="store-btn">
+                        <img src="appstore-button.png" alt="Download on App Store">
+                    </a>                
                 </div>
             </div>
         </section>
@@ -60,11 +59,5 @@
     <footer>
         <p>&copy; 2025 MyEscape</p>
     </footer>
-
-    <script>
-        document.querySelector('.burger-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('visible');
-        });
-    </script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - MyEscape</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <link rel="icon" href="icon.webp"/>
 </head>
 <body>
@@ -31,26 +32,28 @@
             <p>Want to find quickly a place where we want to be ?</p>
         </section>
         <!-- Section TOP 3 Activités -->
-        <section class="top-activities animate-left-to-right">
-            <h2>🔥 Top 3 Activities of the Week 🔥</h2>
+        <section class="top-activities">
+            <div class="animate-left-to-right">
+                <h2>🔥 Top 3 Activities of the Week 🔥</h2>
+            </div>
             <div class="podium">
-                <div class="activity top2">
+                <div class="activity top2 animate-up">
                     <span class="rank animate-up">🥈 TOP 2</span>
                     <img src="Croixdesgardes.jpg" alt="Activity 2" class="animate-up">
                     <div class="animate-up">
-                        <p>Croix Des Gardes </p>
+                        <p>Croix Des Gardes</p>
                     </div>
                     <img src="2stars.png" class="small animate-fade-in">
                 </div>
-                <div class="activity top1">
+                <div class="activity top1 animate-up">
                     <span class="rank animate-up">🏆 TOP 1</span>
                     <img src="suquet.jpg" alt="Activity 1" class="animate-up">
                     <div class="animate-up">
-                        <p>le Suquet</p>
+                        <p>Le Suquet</p>
                     </div>
                     <img src="4stars.png" class="small animate-fade-in">
                 </div>
-                <div class="activity top3">
+                <div class="activity top3 animate-up">
                     <span class="rank animate-up">🥉 TOP 3</span>
                     <img src="malmaison.jpg" alt="Activity 3" class="animate-up">
                     <div class="animate-up">
@@ -58,19 +61,12 @@
                     </div>
                     <img src="3stars.png" class="small animate-fade-in">
                 </div>
-            </div>
+            </div>            
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 MyEscape</p>
     </footer>
-
-    <script>
-        document.querySelector('.burger-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('visible');
-        });
-    </script>
-    
 </body>
 </html>

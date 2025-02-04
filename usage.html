@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Usage - MyEscape</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <link rel="icon" href="icon.webp"/>
 </head>
 <body>
@@ -26,9 +27,11 @@
     </header>
 
     <main>
-        <section class="hero animatefadetitle">
-            <h1>App Usage</h1>
-            <p>Learn how to make the most out of MyEscape.</p>
+        <section class="hero">
+            <div class="animatefadetitle">
+                <h1>App Usage</h1>
+                <p>Learn how to make the most out of MyEscape.</p>
+            </div>
         </section>
 
         <section class="app-usage">
@@ -51,10 +54,5 @@
         <p>&copy; 2025 MyEscape</p>
     </footer>
 
-    <script>
-        document.querySelector('.burger-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('visible');
-        });
-    </script>
 </body>
 </html>

@@ -53,6 +53,30 @@ header {
     background-color: var(--header-bg-color);
 }
 
+/* Styles de base pour les liens */
+nav a {
+    text-decoration: none; /* Enlever le soulignement par défaut */
+    color: black; /* Couleur initiale du texte */
+    transition: all 0.3s ease; /* Transition douce pour les effets */
+}
+
+/* Style pour l'élément sélectionné (lien actif) */
+nav a.active {
+    background-color: #b7f5b7; /* Vert clair pour le fond */
+    text-decoration: underline; /* Souligner le texte */
+    color: #2d9d2d; /* Couleur du texte verte */
+}
+
+nav ul {
+    display: none;  /* Masquer le menu par défaut */
+    z-index: 2
+}
+
+/* Pour le menu burger, ajouter la classe .visible pour afficher le menu */
+nav ul.visible {
+    display: block;
+}
+
 header nav ul { /* HEADER affichage en colonne */
     list-style-type: none;
     display: flex; /* Show by default */
@@ -199,7 +223,9 @@ form button:hover {
     object-fit: cover;
     border-radius: 5px;
 }
-
+.podium, .top-activities {
+    overflow: visible !important;
+}
 /* Bouton d'installation */
 .install-btn {
     background-color: var(--button-bg-color);
@@ -274,7 +300,7 @@ h1 {
 
 /* Animation au survol */
 .activity:hover {
-    transform: scale(1.2); /* Agrandir sans modifier la position */
+    transform: scale(1.2) !important; /* Agrandir sans modifier la position */
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
@@ -314,6 +340,7 @@ h1 {
     position: absolute;
     top: 10px;
     right: 20px;
+    z-index: 10;
 }
 
 /* Style des trois barres du burger */
@@ -375,7 +402,7 @@ h1 {
 
 .animate-left-to-right {
     opacity: 0;
-    animation: fadeInLeftToRight 1s ease-out forwards;
+    animation: fadeInLeftToRight 2s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -391,10 +418,15 @@ h1 {
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
     animation-delay: 1.3s;
+    z-index: 2; /* Assurez-vous que l'élément reste au-dessus de l'overlay */
 }
 
 .animatefadetitle {
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
     animation-delay: 0.4s;
+    z-index: 2; /* Même chose ici pour la section avec l'animation de titre */
 }
+
+
+/*
