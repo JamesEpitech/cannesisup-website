@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Mon Site</title>
+    <title>Accueil - MyEscape</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
                     <span class="rank">🥈 TOP 2</span>
                     <img src="Croixdesgardes.jpg" alt="Activity 2">
                     <p>Croix Des Gardes</p>
-                    <img src="3stars.png" class="small">
+                    <img src="2stars.png" class="small">
                 </div>
                 <div class="activity top1">
                     <span class="rank">🏆 TOP 1</span>
@@ -44,6 +44,7 @@
                     <span class="rank">🥉 TOP 3</span>
                     <img src="malmaison.jpg" alt="Activity 3">
                     <p>MalMaison</p>
+                    <img src="3stars.png" class="small">
                 </div>
             </div>
         </section>
@@ -52,5 +53,12 @@
     <footer>
         <p>&copy; 2025 MyEscape</p>
     </footer>
-</body>
+
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            menuToggle.checked = !menuToggle.checked; // Toggle the checkbox state
+            console.log('Burger menu clicked, checkbox state:', menuToggle.checked); // Debugging log
+        });
+    </script>
 </html>

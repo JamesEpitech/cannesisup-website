@@ -232,10 +232,9 @@ h1 {
 .top-activities h2 {
     font-size: 2rem;
     color: #3e7a31;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
-/* Podium Layout */
 /* Podium Layout */
 .podium {
     display: flex;
@@ -243,6 +242,7 @@ h1 {
     align-items: flex-end; /* Alignement en bas pour créer l'effet podium */
     gap: 20px;
     text-align: center;
+    flex-wrap: wrap; /* Permet d'adapter sur petits écrans */
 }
 
 /* Style général des activités */
@@ -258,36 +258,38 @@ h1 {
 
 /* Hauteur du podium */
 .top1 {
-    height: 300px; /* TOP 1 le plus haut */
+    height: 300px;
 }
 
 .top2 {
-    height: 270px; /* TOP 2 un peu plus bas */
+    height: 270px;
 }
 
 .top3 {
-    height: 250px; /* TOP 3 légèrement plus bas */
+    height: 250px;
 }
 
 /* Animation au survol */
 .activity:hover {
     transform: scale(1.2); /* Agrandir sans modifier la position */
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
-    z-index: 10; /* Le faire passer au-dessus des autres */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 /* Images */
 .activity img {
     width: 100%;
+    max-width: 180px; /* Évite les images trop grandes */
     height: auto;
     object-fit: contain;
     border-radius: 10px;
 }
 
+/* Deuxième image (étoiles ou autre) */
 .activity img.small {
-    height: 150px; /* Taille réduite */
+    height: 100px; /* Taille ajustée */
     object-fit: scale-down;
-    margin-top: -80px;
+    margin-top: -50px; /* Ajustement fin */
 }
 
 /* Classement */
@@ -298,5 +300,45 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Adaptation sur écrans plus petits */
+@media (max-width: 768px) {
+    .podium {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity {
+        width: 90%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .top1, .top2, .top3 {
+        height: auto;
+        transform: none; /* Désactive l'effet podium sur mobile */
+    }
+}
+
+/* Styles de base du menu */
+nav {
+    background-color: #3e7a31;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Menu de navigation *
+
+/* Liens du menu */
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    font-size: 1.2rem;
+}
 
 /*Premiere montrer le Top 3 des lieux et ensuite proposer le meilleur profile avec qui etre en fonction de ce qu'on veut et partage avec la personne pour avoir des echanges 
