@@ -27,10 +27,13 @@ main {
 
 .container {
     padding: 0 50px; /* Espace de 50px à gauche et à droite */
+    font-size: 1.7rem;
+
 }
 
 .container1 {
     padding: 0 100px; /* Espace de 50px à gauche et à droite */
+    font-size: 1.3rem;
 }
 /* Retirer les marges et padding supplémentaires */
 html, body {
@@ -62,9 +65,9 @@ nav a {
 
 /* Style pour l'élément sélectionné (lien actif) */
 nav a.active {
-    background-color: #b7f5b7; /* Vert clair pour le fond */
-    text-decoration: underline; /* Souligner le texte */
-    color: #2d9d2d; /* Couleur du texte verte */
+    background-color: #b7f5b7;
+    text-decoration: underline;
+    color: #2d9d2d;
 }
 
 nav ul {
@@ -72,20 +75,20 @@ nav ul {
     z-index: 2
 }
 
-/* Pour le menu burger, ajouter la classe .visible pour afficher le menu */
+/* Pour le menu burger */
 nav ul.visible {
     display: block;
 }
 
 header nav ul { /* HEADER affichage en colonne */
     list-style-type: none;
-    display: flex; /* Show by default */
+    display: flex;
     justify-content: space-around;
     font-size: 30px;
 }
 
 header nav ul.visible { /* Show when visible class is applied */
-    display: flex; /* Show the menu when the class is applied */
+    display: flex;
 }
 
 header nav ul li a { /* lien en header */
@@ -98,7 +101,7 @@ header nav ul li a:hover {
     box-shadow: 0 0 50px 10px rgba(104, 150, 104, 1);
     transition: box-shadow 0.3s ease;
     background-color: rgb(123, 168, 123);
-    border-radius: 15px; /* Arrondi des bords */
+    border-radius: 15px;
 
 }
 
@@ -121,7 +124,7 @@ form {
 
 .form-text {
     position: relative;
-    left: 600px; /* Ajuste la valeur selon tes besoins */
+    left: 600px;
 }
 
 form label {
@@ -153,7 +156,7 @@ form button:hover {
 .installation-section {
     text-align: center;
     padding: 50px 20px;
-    color: #555; /* Texte dans la section d'installation */
+    color: #555;
     font-size: 3rem;
 }
 
@@ -202,19 +205,19 @@ form button:hover {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    gap: 20px; /* Espace entre les boutons */
+    gap: 20px;
 }
 
 /* Style des boutons avec images */
 .store-btn {
-    background-color: transparent; /* Pas de fond */
-    border: none;  /* Pas de bordure */
-    padding: 0;  /* Pas de padding */
+    background-color: transparent;
+    border: none;
+    padding: 0;
     cursor: pointer;
     display: inline-block;
-    width: 170px; /* Augmenter légèrement la largeur */
-    height: 60px; /* Augmenter légèrement la hauteur */
-    position: relative;  /* Pour mieux positionner l'image à l'intérieur du bouton */
+    width: 170px;
+    height: 60px;
+    position: relative;
 }
 
 .store-btn img {
@@ -244,7 +247,11 @@ form button:hover {
 }
 
 h1 { 
-    color: var(--main-text-color); /* Couleur du texte pour install MYescape */
+    color: var(--main-text-color);
+}
+
+.hero h1 {
+    font-size: 3em;
 }
 
 .top-activities {
@@ -268,10 +275,10 @@ h1 {
 .podium {
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Alignement en bas pour créer l'effet podium */
+    align-items: flex-end;
     gap: 20px;
     text-align: center;
-    flex-wrap: wrap; /* Permet d'adapter sur petits écrans */
+    flex-wrap: wrap;
 }
 
 /* Style général des activités */
@@ -281,7 +288,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 180px; /* Taille de base */
+    width: 180px;
     text-align: center;
 }
 
@@ -300,7 +307,7 @@ h1 {
 
 /* Animation au survol */
 .activity:hover {
-    transform: scale(1.2) !important; /* Agrandir sans modifier la position */
+    transform: scale(1.2) !important;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
@@ -308,7 +315,7 @@ h1 {
 /* Images */
 .activity img {
     width: 100%;
-    max-width: 180px; /* Évite les images trop grandes */
+    max-width: 180px;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
@@ -316,9 +323,9 @@ h1 {
 
 /* Deuxième image (étoiles ou autre) */
 .activity img.small {
-    height: 100px; /* Taille ajustée */
+    height: 100px;
     object-fit: scale-down;
-    margin-top: -50px; /* Ajustement fin */
+    margin-top: -50px;
 }
 
 /* Classement */
@@ -354,7 +361,7 @@ h1 {
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     header nav ul {
-        display: none; /* Cacher par défaut */
+        display: none;
     }
 
     /* Affichage du bouton burger uniquement sur mobile */
@@ -362,7 +369,7 @@ h1 {
         display: flex;
     }
     header nav ul.visible {
-        display: flex; /* Afficher quand la classe "visible" est ajoutée */
+        display: flex;
         flex-direction: column;
         width: 100%;
         background-color: var(--header-bg-color);
@@ -418,15 +425,18 @@ h1 {
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
     animation-delay: 1.3s;
-    z-index: 2; /* Assurez-vous que l'élément reste au-dessus de l'overlay */
+    z-index: 2;
 }
 
 .animatefadetitle {
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
     animation-delay: 0.4s;
-    z-index: 2; /* Même chose ici pour la section avec l'animation de titre */
+    z-index: 2;
 }
 
-
-/*
+.small-img {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+}

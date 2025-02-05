@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('nav a');
     links.forEach(link => {
         link.addEventListener('click', () => {
-            links.forEach(l => l.classList.remove('active')); // Supprime les classes actives
-            link.classList.add('active'); // Ajoute la classe active
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
         });
     });
 });
